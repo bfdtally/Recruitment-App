@@ -1,0 +1,4 @@
+import { programs } from '../data/programs'
+import { officialLinks } from '../data/officialLinks'
+import { counselorResources } from '../data/counselorResources'
+export function ContentAuditPage(){return <section className="audit-page shell"><p className="eyebrow">Development utility</p><h1>Content Source Audit</h1><p>Institutional content and the official source used to verify it.</p><h2>Programs</h2><table><tbody>{programs.map(p=><tr key={p.slug}><th>{p.name}</th><td><a href={p.sourceUrl}>{p.sourceUrl}</a></td><td>{p.reviewedOn}</td></tr>)}</tbody></table><h2>Official links</h2><table><tbody>{Object.values(officialLinks).map(l=><tr key={l.label}><th>{l.label}</th><td><a href={l.sourceUrl}>{l.sourceUrl}</a></td><td>{l.reviewedOn}</td></tr>)}</tbody></table><h2>Resources</h2><table><tbody>{counselorResources.map(r=><tr key={r.id}><th>{r.title}</th><td><a href={r.officialUrl}>{r.officialUrl}</a></td><td>{r.dateReviewed}</td></tr>)}</tbody></table></section>}

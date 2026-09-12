@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom'
+import { siteContent } from '../data/siteContent'
+export function WhyPage(){return <><section className="resource-hero"><div className="shell narrow-heading"><p className="eyebrow">Why FAMU COE</p><h1>A legacy of preparing educators and leaders</h1><p>The College of Education’s story begins with the university itself.</p></div></section><section className="why-section shell"><div className="heritage-seal"><span>Founded in</span><strong>1887</strong></div><div><p className="eyebrow">The cornerstone college</p><h2>{siteContent.heritage.title}</h2><p>{siteContent.heritage.body}</p><Link className="button button-green" to="/programs">Explore programs</Link></div></section></>}
